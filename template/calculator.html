@@ -1,0 +1,38 @@
+<form  method = "post">
+{% csrf_token %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/styles.css" />
+  <title>Simple calculator</title>
+</head>
+<body>
+  <div class="body">
+  <h1>CALCULATOR</h1>
+  <form method = "post">
+
+    <input type="number" id="num1" name="num1" placeholder="Enter first number" />
+    <br />
+    <br />
+    <input type="number" id="num2" name="num2" placeholder="Enter second number" />
+    <br />
+    <br />
+     <label>Select operation:</label>
+  <select id="operation" name="operation">
+    <option value="add">Addition (+)</option>
+    <option value="subtract">Subtraction (-)</option>
+    <option value="multiply">Multiplication (×)</option>
+    <option value="divide">Division (÷)</option>
+  </select><br><br>
+
+    <submit type="button" value="Submit" />
+  <ladel for="result">Result:</label>
+    <input type="number" value="{{result}}" readonly />
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
